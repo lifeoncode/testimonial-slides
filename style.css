@@ -20,137 +20,134 @@
 }
 
 
-body{
-    font-family: 'Inter', sans-serif;
-    background-color: #fff;
-}
-
 img{
     width: 100%;
 }
 
 
-.bg_img{
-    position: absolute;
-    z-index: -1;
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
 }
 
-
-.quote{
-    width: 10%;
-    left: 10%;
-    top: 150px;
+p{
+    font-size: 2rem;
+    color: var(--dark-blue);
+    font-weight: 100;
+    line-height: 1.4;
+    margin-bottom: 2rem;
 }
 
-.colorful{
-    width: 60%;
-    right: -10px;
-    top: 0;
+h3{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
 }
 
-.curve{
-    width: 40%;
-    bottom: 0;
-    left: 0;
+span{
+    margin-left: 1rem;
+    color: var(--gray-blue);
 }
-
-
-
 
 
 
 
 main{
+    position: relative;
     width: 80%;
     margin: auto;
-    padding: 4rem 0;
-    position: relative;
+    padding: 3rem 0;
+}
+
+
+
+
+/* background images */
+.background{
+    position: absolute;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 0 4rem;
+}
+
+.quote{
+    padding-top: 6rem;
+    padding-left: 4rem;
+}
+.quote img{
+    width: 20%;
+}
+
+.curve{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+}
+
+
+
+
+
+
+/* slides content */
+.slides{
+    position: relative;   
+    z-index: 1;
 }
 
 .slide_a,
 .slide_b{
-    position: relative;
+    position: absolute;
+    padding: 4rem 0;
 }
 
 
 .text{
-    position: absolute;
+    position: relative;
     z-index: 2;
-    width: 60%;
-    top: 150px;
+    width: 65%;
+    padding-top: 4rem;
 }
+
+
 
 .photo{
     position: absolute;
-    width: 45%;
-    top: 20px;
-    right: 5%;
-    box-shadow: 6px 4px 10px var(--dark-blue);
-}
-
-.text p{
-    font-size: 2rem;
-    font-weight: 100;
-    color: var(--dark-blue);
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
-.text h3{
-    display: inline-block;
-    font-size: 1.2rem;
-    color: var(--dark-blue);
-    font-weight: 700;
-}
-
-.text span{
-    color: var(--gray-blue);
-    font-size: 1.1rem;
-    margin-left: 1rem;
+    right: 50px;
+    top: 50px;
+    width: 40%;
+    box-shadow: 4px 6px 10px rgba(2, 2, 88, 0.699);
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* toggle buttons */
 .btns{
     position: absolute;
-    top: 560px;
-    right: 35%;
     z-index: 4;
-    display: inline-block;
+    bottom: -15px;
+    left: 30px;
     background-color: #fff;
-    padding: 1rem 0;
-    text-align: center;
     display: flex;
     border-radius: 2rem;
-    box-shadow: 1px 1px 2px var(--dark-blue);
-    transition: all 0.3s ease;
-}
-.btns:hover{
-    box-shadow: 2px 4px 6px var(--dark-blue);
+    box-shadow: 2px 4px 6px rgba(2, 2, 88, 0.699);
 }
 
 .btns img{
-    width: 15%;
-    margin: 0 1rem;
+    margin: 1rem 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .btns img:hover{
     transform: scale(1.5);
 }
+
+
+
 
 
 
@@ -174,30 +171,31 @@ main{
 
 
 
+@media screen and (max-width: 1100px){
 
-
-
-
-@media screen and (max-width: 1200px){
 
     main{
         width: 90%;
     }
-
-    .text{
-        top: 80px;
-    }
-
-    .quote{
-        top: 85px;
-    }
     
-    .text p{
+    p{
         font-size: 1.6rem;
     }
+    
+}
 
-    .btns{
-        top: 480px;
+
+
+
+@media screen and (max-width: 900px){
+
+
+    main{
+        width: 95%;
+    }
+    
+    p{
+        font-size: 1.6rem;
     }
     
 }
@@ -208,176 +206,132 @@ main{
 
 
 
+@media screen and (max-width: 800px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1000px){
 
     main{
-        width: 90%;
+        padding: 2rem 0;
+        width: 80%;
+        text-align: center;
     }
-
-    .text{
-        top: 80px;
+    
+    
+    
+    .background{
+        display: flex;
+        flex-direction: column-reverse;
+        grid-template-columns: none;
+        grid-gap: 4rem 0;
     }
 
     .quote{
-        top: 100px;
+        padding-top: 4rem;
+        padding-left: 0;
+    }
+    .quote img{
+        width: 20%;
     }
     
-    .text p{
-        font-size: 1.4rem;
-    }
-
-    .btns{
-        top: 370px;
+    .curve{
+        width: 100%;
     }
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 730px){
-
-    main{
-        width: 70%;
-        text-align: center;
-    }
-
+    
+    
     .slide_a,
     .slide_b{
+        padding: 4rem 0;
         display: flex;
         flex-direction: column-reverse;
     }
+
 
     .text{
         position: relative;
         top: 0;
         left: 0;
-        padding: 6rem 0;
-        margin-top: 4rem;
         width: 100%;
+        padding-top: 10rem;
     }
+
+
 
     .photo{
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
-    }
-    
-
-    .quote{
-        top: 600px;
-        width: 30%;
-    }
-    
-    .text p{
-        font-size: 1.5rem;
+        box-shadow: none;
     }
 
+    .photo img{
+        width: 80%;
+        box-shadow: 4px 6px 10px rgba(3, 3, 63, 0.616);
+    }
+
+
+    /* toggle buttons */
     .btns{
-        position: relative;
-        top: -600px;
-        left: 0;
-        width: 20%;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
+        bottom: -15px;
+        left: 40%;
     }
 
     .btns img{
-        margin: 0 1rem;
+        box-shadow: none;
     }
 
-
-    .colorful{
-        width: 100%;
-        right: 10%;
-        top: 200px;
-    }
-
-    .curve{
-        display: none;
-    }
 }
 
 
 
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 580px){
 
     main{
-        width: 80%;
+        width: 90%;
     }
+    
 
+    p{
+        font-size: 1.5rem;
+    }
+    h3{
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    span{
+        margin: 0;
+    }
 }
-
-
 
 
 
 @media screen and (max-width: 430px){
 
-    main{
-        width: 90%;
-    }
 
-    .text h3{
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
-    .text span{
-        margin: 0;
+    .photo img{
+        width: 85%;
     }
 
     .btns{
-        top: -680px;
+        left: 35%;
+    }
+    .btns img{
+        margin: 0.5rem 1rem;
+    }
+    .curve{
+        display: none;
+    }
+
+    .text{
+        padding-top: 5rem;
     }
 
     .quote{
-        width: 20%;
-        top: 520px;
+        padding-top: 5rem;
+    }
+
+    p{
+        font-size: 1.2rem;
     }
 }
-
-
-
